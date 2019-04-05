@@ -2,14 +2,22 @@
 
 <suite name="NegativeTestSuite" verbose="1">
 
-    <test name="NegativeTest">
-        <groups>
-            <run>
-                <include name="negativeTests" />
-            </run>
-        </groups>
+    <test name="NegativeUsernameTest">
+        <parameter name="username"  value="wronguser"/>
+        <parameter name="password"  value="SuperSecretPassword!"/>
+        <parameter name="expectedErrorMessage"  value="Your username is invalid!"/>
         <classes>
             <class name="com.zacranck.theinternet.NegativeTests"/>
         </classes>
     </test>
+
+    <test name="NegativePasswordTest">
+        <parameter name="username"  value="tomsmith"/>
+        <parameter name="password"  value="wrongpassword"/>
+        <parameter name="expectedErrorMessage"  value="Your password is invalid!"/>
+        <classes>
+            <class name="com.zacranck.theinternet.NegativeTests"/>
+        </classes>
+    </test>
+
 </suite>
