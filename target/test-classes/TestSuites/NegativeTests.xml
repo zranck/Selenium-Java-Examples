@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="NegativeTestSuite" verbose="1">
+
+    <test name="NegativeTest">
+        <groups>
+            <run>
+                <include name="negativeTests" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.zacranck.theinternet.NegativeTests"/>
+        </classes>
+    </test>
+</suite>
