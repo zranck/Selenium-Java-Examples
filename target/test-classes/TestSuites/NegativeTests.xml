@@ -2,14 +2,42 @@
 
 <suite name="NegativeTestSuite" verbose="1">
 
-    <test name="NegativeTest">
-        <groups>
-            <run>
-                <include name="negativeTests" />
-            </run>
-        </groups>
+    <test name="NegativeUsernameTest-CH">
+        <parameter name="username" value="wronguser"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.zacranck.theinternet.NegativeTests"/>
         </classes>
     </test>
+    <test name="NegativeUsernameTest-FF">
+        <parameter name="username" value="wronguser"/>
+        <parameter name="password" value="SuperSecretPassword!"/>
+        <parameter name="expectedErrorMessage" value="Your username is invalid!"/>
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.zacranck.theinternet.NegativeTests"/>
+        </classes>
+    </test>
+    <test name="NegativePasswordTest-CH">
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="wrongpassword"/>
+        <parameter name="expectedErrorMessage" value="Your password is invalid!"/>
+        <parameter name="browser" value="chome"/>
+        <classes>
+            <class name="com.zacranck.theinternet.NegativeTests"/>
+        </classes>
+    </test>
+    <test name="NegativePasswordTest-FF">
+        <parameter name="username" value="tomsmith"/>
+        <parameter name="password" value="wrongpassword"/>
+        <parameter name="expectedErrorMessage" value="Your password is invalid!"/>
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="com.zacranck.theinternet.NegativeTests"/>
+        </classes>
+    </test>
+
+
 </suite>
